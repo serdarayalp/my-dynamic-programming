@@ -15,7 +15,7 @@ class GFG {
         // Create a table to store
         // solutions of subproblems
         int table[][] = new int[n][n];
-        int gap, i, j, x, y, z;
+        int w, i, j, x, y, z;
 
         // Fill table using above recursive formula.
         // Note that the tableis filled in diagonal
@@ -36,8 +36,8 @@ class GFG {
                 F(i, j) = Vi           If j == i
                 F(i, j) = max(Vi, Vj)  If j == i + 1
          */
-        for (gap = 0; gap < n; ++gap) {
-            for (i = 0, j = gap; j < n; ++i, ++j) {
+        for (w = 0; w < n; ++w) {
+            for (i = 0, j = w; j < n; ++i, ++j) {
 
                 // x = F(i+2, j),
                 // y = F(i+1, j-1) and
@@ -76,18 +76,35 @@ class GFG {
 
         int arr0[] = {8, 5};
         int n = arr0.length;
+        System.out.println("{8, 5}");
         System.out.println(optimalStrategyOfGame(arr0, n));
 
         int arr1[] = {8, 15, 3, 7};
         n = arr1.length;
+        System.out.println("{8, 15, 3, 7}");
         System.out.println(optimalStrategyOfGame(arr1, n));
 
         int arr2[] = {2, 2, 2, 2};
         n = arr2.length;
+        System.out.println("{2, 2, 2, 2}");
         System.out.println(optimalStrategyOfGame(arr2, n));
 
         int arr3[] = {20, 30, 2, 2, 2, 10};
         n = arr3.length;
+        System.out.println("{20, 30, 2, 2, 2, 10}");
         System.out.println(optimalStrategyOfGame(arr3, n));
+
+        int arr4[] = {4, 7, 2, 3};
+        ;
+        n = arr4.length;
+        System.out.println("{4,7,2,3}");
+        System.out.println(optimalStrategyOfGame(arr4, n));
+
+        int arr5[] = {3, 4, 1, 2, 8, 5};
+        n = arr5.length;
+        System.out.println("{3,4,1,2,8,5}");
+        System.out.println(optimalStrategyOfGame(arr5, n));
+
     }
+
 }
